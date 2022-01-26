@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #alertBox {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container px-6 py-4 items-center">
+        <nav class="relative w-full flex flex-wrap items-center justify-between py-3 bg-gray-100 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg">
+            <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+                <div class="container-fluid">
+                    <p class="text-xl text-black">The Notes App using Tailwind CSS & Vanilla JS</p>
+                </div>
+            </div>
+        </nav>
+        <!--  -->
+        <div id="alertBox" class="z-40 bg-yellow-100 border-t-4 border-yellow-500 rounded-b text-yellow-900 px-4 py-3 shadow-md" role="alert">
+            <div class="flex">
+                <div class="py-1"><svg class="fill-current h-6 w-6 text-yellow-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
+                    </svg></div>
+                <div>
+                    <p class="font-bold">Enter the note to continue..!</p>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="max-w-lg rounded overflow-hidden shadow-lg">
+            <div class="px-6 py-4">
+                <div class="mb-3 xl:w-96">
+                    <label for="addTxt" class="form-label inline-block mb-2 text-gray-700">Take your Notes here</label>
+                    <textarea class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="addTxt" rows="3" placeholder="Your note..."></textarea>
+                </div>
+                <div>
+                    <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" id="addBtn" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg ">
+                        Add Note
+                    </button>
+                    <button type="button" id="clearBtn" class="inline-block px-6 py-2.5 bg-gray-200 text-gray-700 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out">
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div id="notes" class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
